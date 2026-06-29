@@ -1,12 +1,11 @@
-//your JS code here. If required.
-const btn = document.getElementById("submit");
+ const btn = document.getElementById("submit");
 
     // btn event listener
     btn.addEventListener("click", () => {
-      const player1 = document.getElementById("player-1").value;
-      const player2 = document.getElementById("player-2").value;
+      const player1 = document.getElementById("player1").value;
+      const player2 = document.getElementById("player2").value;
 
-      let currentPlayer = "X";
+      let currentPlayer = "x";
       let moves = 0;
       let gameOver = false;
 
@@ -46,7 +45,7 @@ const btn = document.getElementById("submit");
             cellB.textContent === cellC.textContent
           ) {
             message.textContent =
-              currentPlayer === "X"
+              currentPlayer === "x"
                 ? `${player1} congratulations you won!`
                 : `${player2} congratulations you won!`;
 
@@ -81,10 +80,10 @@ const btn = document.getElementById("submit");
             return;
           }
 
-          currentPlayer = currentPlayer === "X" ? "O" : "X";
+          currentPlayer = currentPlayer === "x" ? "o" : "x";
 
           message.textContent =
-            currentPlayer === "X"
+            currentPlayer === "x"
               ? `${player1}, you're up`
               : `${player2}, you're up`;
         });
